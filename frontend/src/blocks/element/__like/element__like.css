@@ -1,0 +1,33 @@
+.element__like {
+    background-image: url(../../../images/element_heart.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size: contain;
+    width: 21px;
+    min-height: 18px;
+    border: none;
+    margin: 0 0 3px;
+    padding: 0;
+    /* align-self: baseline; */
+}
+
+.element__like:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 950px) {
+    .element__like {
+        width: 2.21vw;
+        min-height: 1.9vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .element__like {
+        width: 6.56vw;
+        min-height: 5.625vw;
+    }
+}

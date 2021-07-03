@@ -1,0 +1,26 @@
+.profile__avatar {
+    width: 100%;
+    max-width: 120px;
+    border-radius: 50%;
+    min-height: 120px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 950px) {
+    .profile__avatar {
+        max-width: 12.63vw;
+        min-height: 12.63vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .profile__avatar {
+        max-width: 37.5vw;
+        min-height: 37.5vw;
+    }
+}
+
+.profile__avatar:hover {
+    opacity: 0.2;
+    cursor: pointer;
+}

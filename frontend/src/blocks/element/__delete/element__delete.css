@@ -1,0 +1,38 @@
+.element__delete {
+    background-image: url(../../../images/trash.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    background-size: contain;
+    width: 21px;
+    height: 18px;
+    border: none;
+    position: relative;
+    top: 36px;
+    right: -248px;
+    z-index: 1;
+}
+
+.element__delete:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 950px) {
+    .element__delete {
+        width: 2.211vw;
+        height: 1.895vw;
+        top: 3.79vw;
+        right: -26.105vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .element__delete {
+        width: 6.56vw;
+        height: 5.625vw;
+        top: 11.25vw;
+        right: -77.5vw;
+    }
+}

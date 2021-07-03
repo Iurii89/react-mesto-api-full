@@ -1,0 +1,25 @@
+.profile__profile-info{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    color: #ffffff;
+    max-width: 336px;
+    margin-left: 26.25px;
+    padding: 0;
+}
+
+@media screen and (max-width: 950px) {
+    .profile__profile-info {
+        margin-left: 2.76vw;
+        width: 35.368vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .profile__profile-info {
+        margin: 3.4vw 0 0 0;
+        width: 68.44vw;
+        grid-template-columns: 62.81vw 1fr;
+        text-align: center;
+    }
+}
+

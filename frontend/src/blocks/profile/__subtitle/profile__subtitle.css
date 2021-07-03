@@ -1,0 +1,28 @@
+.profile__subtitle {
+    font-size: 18px;
+    line-height: 22px;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 288px;
+}
+
+@media screen and (max-width: 950px) {
+    .profile__subtitle {
+        font-size: 1.894vw;
+        line-height: 2.315vw;
+        max-width: 30.315vw;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .profile__subtitle {
+        max-width: 68.44vw;
+        font-size: 4.38vw;
+        line-height: 5.31vw;
+        grid-column-start: 1;   
+        grid-column-end: 3; 
+    }
+}

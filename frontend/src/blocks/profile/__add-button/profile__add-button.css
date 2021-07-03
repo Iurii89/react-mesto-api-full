@@ -1,0 +1,36 @@
+.profile__add-button {
+    width: 100%;
+    max-width: 150px;
+    min-height: 50px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 2px;
+    margin: 0 0 0 auto;
+    background-color: transparent;
+    background-image: url(../../../images/cross.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0;
+}
+
+.profile__add-button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 950px) { 
+    .profile__add-button {
+        max-width: 16vw;
+        min-height: 5.3vw;
+        margin: 0 0 0 auto;
+    }
+    }
+
+@media screen and (max-width: 550px) { 
+    .profile__add-button {
+        max-width: 88.125vw;
+        min-height: 15.63vw;
+        margin: 10.625vw 0 0;
+        background-size: 5vw;
+    }
+}
