@@ -17,7 +17,7 @@ mongoose.connect('mongodb://localhost:27017/mestodb', {
 mongoose.connection.on('open', () => console.log('DB connected'));
 mongoose.connection.on('error', () => console.log('Ошибка подключения базы "DB" с "mongoose"'));
 
-const PORT = 3000;
+const PORT = 3001;
 const router = require('./routes');
 const pageNotFound = require('./controllers/pageNotFound');
 const errorHandler = require('./middlewares/errorHandler');
@@ -35,7 +35,14 @@ app.use(express.json());
 
 app.use(requestLogger);
 app.use(cors({
-  origin: 'https://iurii.nomoredomains.icu',
+  origin: 'http://localhost:3000',
+  credentials: true,
+  allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
+  methods: 'GET, POST, PATCH, DELETE, OPTIONS, PUT',
+}));
+
+app.options('*', cors({
+  origin: 'http://localhost:3000',
   credentials: true,
   allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
   methods: 'GET, POST, PATCH, DELETE, OPTIONS, PUT',

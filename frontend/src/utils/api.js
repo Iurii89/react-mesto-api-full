@@ -120,7 +120,7 @@ class Api {
 
 
 const config = {
-  url: "https://api.iurii.nomoredomains.club",
+  url: "http://localhost:3001",
   headers: {
     "Accept": "application/json",
     "Content-Type": "application/json",

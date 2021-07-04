@@ -9,12 +9,12 @@ const auth = (req, res, next) => {
   if (!authorization) {
     throw new Unauthorized('Нет токена');
   }
-  const token = authorization.replace(/^Bearer /, '');
+  const token = authorization.replace(/* /^Bearer / */ 'Bearer ', '');
   try {
-    const payload = jwt.verify(token, JWT_SECRET);
+    const payload = jwt.verify(token, process.env.NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret');
     req.user = payload;
   } catch (err) {
-    throw new Unauthorized('Нет токена');
+    throw new Unauthorized('Ошибка авторизации');
   }
   next();
 };
