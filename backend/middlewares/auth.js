@@ -9,7 +9,7 @@ const auth = (req, res, next) => {
   if (!authorization) {
     throw new Unauthorized('Нет токена');
   }
-  const token = authorization.replace(/* /^Bearer / */ 'Bearer ', '');
+  const token = authorization.replace('Bearer ', '');
   try {
     const payload = jwt.verify(token, process.env.NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret');
     req.user = payload;

@@ -38,7 +38,7 @@ function App() {
         console.log(err);
       });
     }
-  }, [history, isEditProfilePopupOpen, isEditAvatarPopupOpen]);
+  }, [history, isEditProfilePopupOpen, isEditAvatarPopupOpen, isAddPlacePopupOpen]);
 
   function signOut(){
     localStorage.removeItem('token');
@@ -138,12 +138,6 @@ function App() {
   function handleAddPlace(cardData) {
     api
       .sendNewCard(cardData)
-      .then((newCard) => {
-        setCards([newCard, ...cards]);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
     closeAllPopups();
   }
 

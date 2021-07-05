@@ -41,13 +41,6 @@ app.use(cors({
   methods: 'GET, POST, PATCH, DELETE, OPTIONS, PUT',
 }));
 
-app.options('*', cors({
-  origin: 'http://localhost:3000',
-  credentials: true,
-  allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Authorization',
-  methods: 'GET, POST, PATCH, DELETE, OPTIONS, PUT',
-}));
-
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
